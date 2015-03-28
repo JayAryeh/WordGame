@@ -12,6 +12,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
 
         @IBOutlet weak var picker: UIPickerView!
     private var numberOfLetters: Int = 5
+    private var currentLetters: [Character] = []
     private let letters: [Character] = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,9 +24,17 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         // Dispose of any resources that can be recreated.
     }
     @IBAction func start(sender: AnyObject) {
+        currentLetters.removeAll(keepCapacity: false)
         for  i in 0..<numberOfLetters{
-            picker.selectRow(Int(arc4random_uniform(UInt32(26))), inComponent: i, animated: true)
+            var a = Int(arc4random_uniform(UInt32(26)))
+            
+                
+            picker.selectRow(a, inComponent: i, animated: true)
+            currentLetters.append(letters[a])
+            
         }
+        println(currentLetters)
+        
     }
     
     // MARK:-
