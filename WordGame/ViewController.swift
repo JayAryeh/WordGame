@@ -20,18 +20,24 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
-    @IBAction func submit(sender: AnyObject) {
+    @IBAction func submit(sender: UITextField) {
         submission.resignFirstResponder()
+        print("ha")
         if checker.CompleteCheck(currentLetters, typedInput: submission.text){
-            ++numberOfLetters
-            start(numberOfLetters)
-            
+            numberOfLetters++
+            println("true")
+        }else{
+            numberOfLetters--
+            println("false")
         }
-    }
+        picker.reloadAllComponents()
+
+            }
     
     @IBAction func backGroundTap(sender: AnyObject) {
         submission.resignFirstResponder()
-    }
+            }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
