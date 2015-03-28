@@ -10,14 +10,19 @@ import UIKit
 
 class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
 
+    @IBOutlet weak var round: UILabel!
+    @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var submission: UITextField!
-        @IBOutlet weak var picker: UIPickerView!
+    @IBOutlet weak var picker: UIPickerView!
+    private var roundNumber = 0
+    private var score = 0
     private var checker: Checks = Checks()
     private var numberOfLetters: Int = 5
     private var currentLetters: [Character] = []
     private let letters: [Character] = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
     override func viewDidLoad() {
         super.viewDidLoad()
+        start()
         // Do any additional setup after loading the view, typically from a nib.
     }
     @IBAction func submit(sender: UITextField) {
@@ -26,12 +31,19 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         if checker.CompleteCheck(currentLetters, typedInput: submission.text){
             numberOfLetters++
             println("true")
+            
         }else{
             numberOfLetters--
             println("false")
+            
         }
+        score += Array(submission.text).count
         picker.reloadAllComponents()
-
+        start()
+        submission.text = ""
+        roundNumber++
+        scoreLabel.text = "Score: \(score)"
+        round.text = "Round: \(roundNumber)"
             }
     
     @IBAction func backGroundTap(sender: AnyObject) {
@@ -42,7 +54,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    @IBAction func start(sender: AnyObject) {
+     func start() {
         currentLetters.removeAll(keepCapacity: false)
         for  i in 0..<numberOfLetters{
             var a = Int(arc4random_uniform(UInt32(26)))

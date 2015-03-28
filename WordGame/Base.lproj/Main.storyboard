@@ -24,15 +24,6 @@
                                     <outlet property="delegate" destination="vXZ-lx-hvc" id="ZTK-Eb-mo8"/>
                                 </connections>
                             </pickerView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JIm-wO-plo">
-                                <rect key="frame" x="164" y="190" width="87" height="30"/>
-                                <state key="normal" title="Start Round!">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="start:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="2O0-Kl-D34"/>
-                                </connections>
-                            </button>
                             <textField clearsContextBeforeDrawing="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter word here" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DWC-N5-XC1">
                                 <rect key="frame" x="41" y="260" width="332" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -41,17 +32,37 @@
                                     <action selector="submit:" destination="vXZ-lx-hvc" eventType="editingDidEndOnExit" id="nWo-W6-Sru"/>
                                 </connections>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NyD-yu-lrF">
+                                <rect key="frame" x="35" y="205" width="121" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="121" id="FjK-hn-5wa"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="izA-36-ecb">
+                                <rect key="frame" x="274" y="199" width="133" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="133" id="oB6-h2-91W"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="JIm-wO-plo" firstAttribute="top" secondItem="EoK-On-UGv" secondAttribute="bottom" constant="8" symbolic="YES" id="0H1-ZZ-adI"/>
-                            <constraint firstItem="EoK-On-UGv" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="Ajg-dP-mjv"/>
-                            <constraint firstItem="EoK-On-UGv" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="NEJ-CD-bbl"/>
-                            <constraint firstItem="EoK-On-UGv" firstAttribute="centerX" secondItem="JIm-wO-plo" secondAttribute="centerX" id="VWF-rP-uuY"/>
-                            <constraint firstItem="DWC-N5-XC1" firstAttribute="top" secondItem="JIm-wO-plo" secondAttribute="bottom" constant="40" id="gYo-MQ-nKa"/>
-                            <constraint firstItem="DWC-N5-XC1" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="25" id="jDM-wn-wlE"/>
-                            <constraint firstItem="DWC-N5-XC1" firstAttribute="centerX" secondItem="JIm-wO-plo" secondAttribute="centerX" id="lss-p9-6Wc"/>
-                            <constraint firstAttribute="trailing" secondItem="EoK-On-UGv" secondAttribute="trailing" id="sZW-fd-3ie"/>
+                            <constraint firstItem="EoK-On-UGv" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="4aS-N9-szr"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="izA-36-ecb" secondAttribute="trailing" constant="-9" id="FAM-vA-Qfm"/>
+                            <constraint firstItem="izA-36-ecb" firstAttribute="top" secondItem="EoK-On-UGv" secondAttribute="bottom" constant="17" id="N9z-d5-g28"/>
+                            <constraint firstItem="EoK-On-UGv" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="ONO-B3-ptb"/>
+                            <constraint firstItem="NyD-yu-lrF" firstAttribute="top" secondItem="EoK-On-UGv" secondAttribute="bottom" constant="23" id="Ojl-UL-3mn"/>
+                            <constraint firstItem="NyD-yu-lrF" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="19" id="QFK-nt-mi7"/>
+                            <constraint firstItem="EoK-On-UGv" firstAttribute="centerX" secondItem="DWC-N5-XC1" secondAttribute="centerX" id="S08-9o-HUk"/>
+                            <constraint firstItem="DWC-N5-XC1" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="25" id="Saa-VI-wIP"/>
+                            <constraint firstAttribute="trailing" secondItem="EoK-On-UGv" secondAttribute="trailing" id="fFm-86-6Y1"/>
+                            <constraint firstItem="DWC-N5-XC1" firstAttribute="top" secondItem="NyD-yu-lrF" secondAttribute="bottom" constant="34" id="hCF-HE-R1D"/>
                         </constraints>
                         <connections>
                             <action selector="backGroundTap:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="QKb-st-1AC"/>
@@ -60,6 +71,8 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
                         <outlet property="picker" destination="EoK-On-UGv" id="sVq-zg-k0U"/>
+                        <outlet property="round" destination="NyD-yu-lrF" id="v0K-8A-8uV"/>
+                        <outlet property="scoreLabel" destination="izA-36-ecb" id="nn4-iH-QEs"/>
                         <outlet property="submission" destination="DWC-N5-XC1" id="iff-Tw-GJX"/>
                     </connections>
                 </viewController>
