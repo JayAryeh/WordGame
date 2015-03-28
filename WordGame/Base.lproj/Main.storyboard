@@ -13,17 +13,27 @@
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EoK-On-UGv">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="162"/>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EoK-On-UGv">
+                                <rect key="frame" x="0.0" y="20" width="414" height="162"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="vXZ-lx-hvc" id="Cqx-yR-EeN"/>
+                                    <outlet property="delegate" destination="vXZ-lx-hvc" id="ZTK-Eb-mo8"/>
+                                </connections>
                             </pickerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="EoK-On-UGv" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="0JH-pW-kic"/>
+                            <constraint firstItem="EoK-On-UGv" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="Fpt-5x-sXZ"/>
+                            <constraint firstAttribute="trailing" secondItem="EoK-On-UGv" secondAttribute="trailing" id="t2o-Gc-mCf"/>
+                        </constraints>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
-                        <outlet property="picker" destination="EoK-On-UGv" id="Lih-7n-dLY"/>
+                        <outlet property="picker" destination="EoK-On-UGv" id="sVq-zg-k0U"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
