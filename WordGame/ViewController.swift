@@ -19,7 +19,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     private var checker: Checks = Checks()
     private var numberOfLetters: Int = 5
     private var currentLetters: [Character] = []
-    private let letters: [Character] = ["a","a","a","a","a","a","a","a","b","b","c","c","c","d","d","d","d","e","e","e","e","e","e","e","e","e","e","e","f","f","g","g","h","h","h","h","h","h","i","i","i","i","i","i","i","j","k","l","l","l","l","l","m","m","n","n","n","n","n","n","n","o","o","o","o","o","o","o","o","p","p","q","r","r","r","r","r","r","s","s","s","s","s","s","s","t","t","t","t","t","t","t","t","t","u","u","u","v","w","w","x","y","y","z"]
+    private let letters: [Character] = ["a","a","a","a","b","b","c","c","c","d","d","d","d","e","e","e","e","e","f","f","g","g","h","h","h","h","h","h","i","i","i","i","j","k","l","l","l","l","l","m","m","n","n","n","n","n","n","n","o","o","o","o","p","p","q","r","r","r","r","r","r","s","s","s","s","s","s","s","t","t","t","t","t","t","t","t","t","u","u","u","v","w","w","x","y","y","z"]
     override func viewDidLoad() {
         super.viewDidLoad()
         start()
