@@ -19,13 +19,15 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     private var checker: Checks = Checks()
     private var numberOfLetters: Int = 5
     private var currentLetters: [Character] = []
-    private let letters: [Character] = ["a","a","a","a","b","b","c","c","c","d","d","d","d","e","e","e","e","e","f","f","g","g","h","h","h","h","h","h","i","i","i","i","j","k","l","l","l","l","l","m","m","n","n","n","n","n","n","n","o","o","o","o","p","p","q","r","r","r","r","r","r","s","s","s","s","s","s","s","t","t","t","t","t","t","t","t","t","u","u","u","v","w","w","x","y","y","z"]
+    private let letters: [Character] = ["e","e","e","e","e","e","e","e","e","e","a","a","a","a","a","a","a","a","a","i","i","i","i","i","i","i","i","i","o","o","o","o","o","o","o","o","n","n","n","n","n","n","r","r","r","r","r","r","t","t","t","t","t","t","l","l","l","l","s","s","s","s","u","u","u","u","d","d","d","d","g","g","g","b","b","c","c","m","m","p","p","f","f","h","h","v","v","w","w","y","y","k","j","x"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         start()
         // Do any additional setup after loading the view, typically from a nib.
     }
     @IBAction func submit(sender: UITextField) {
+        start()
         submission.resignFirstResponder()
         print("ha")
         if checker.CompleteCheck(currentLetters, typedInput: submission.text){
@@ -57,7 +59,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
      func start() {
         currentLetters.removeAll(keepCapacity: false)
         for  i in 0..<numberOfLetters{
-            var a = Int(arc4random_uniform(UInt32(26)))
+            var a = Int(arc4random_uniform(UInt32(letters.count)))
             
                 
             picker.selectRow(a, inComponent: i, animated: true)
