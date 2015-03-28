@@ -70,7 +70,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
             
                 
             picker.selectRow(a, inComponent: i, animated: true)
-            currentLetters.append(letters[a])
+            currentLetters.append( Character(pickerView(picker, titleForRow: a, forComponent: i)) )
             currentRows.append(a)
             
         }
@@ -84,13 +84,13 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         return numberOfLetters   }
     
     func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return 26
+        return letters.count
     }
     
     // MARK:-
     // MARK: Picker Delegate Methods
     func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String! {
-        return String(letters[Int(arc4random_uniform(UInt32(letters.count)))])
+        return String(letters[row])
     }
 
 
