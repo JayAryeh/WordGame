@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -32,7 +33,7 @@
                                     <action selector="start:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="2O0-Kl-D34"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DWC-N5-XC1">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DWC-N5-XC1">
                                 <rect key="frame" x="41" y="260" width="332" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -47,6 +48,9 @@
                             <constraint firstItem="EoK-On-UGv" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="Ajg-dP-mjv"/>
                             <constraint firstItem="EoK-On-UGv" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="NEJ-CD-bbl"/>
                             <constraint firstItem="EoK-On-UGv" firstAttribute="centerX" secondItem="JIm-wO-plo" secondAttribute="centerX" id="VWF-rP-uuY"/>
+                            <constraint firstItem="DWC-N5-XC1" firstAttribute="top" secondItem="JIm-wO-plo" secondAttribute="bottom" constant="40" id="gYo-MQ-nKa"/>
+                            <constraint firstItem="DWC-N5-XC1" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="25" id="jDM-wn-wlE"/>
+                            <constraint firstItem="DWC-N5-XC1" firstAttribute="centerX" secondItem="JIm-wO-plo" secondAttribute="centerX" id="lss-p9-6Wc"/>
                             <constraint firstAttribute="trailing" secondItem="EoK-On-UGv" secondAttribute="trailing" id="sZW-fd-3ie"/>
                         </constraints>
                     </view>
