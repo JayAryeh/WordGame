@@ -14,10 +14,12 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var submission: UITextField!
     @IBOutlet weak var picker: UIPickerView!
+    @IBOutlet weak var WinningLabel: UILabel!
+    
     private var roundNumber = 0
     private var score = 0
     private var checker: Checks = Checks()
-    private var numberOfLetters: Int = 5
+    private var numberOfLetters: Int = 8
     private var currentLetters: [Character] = []
     private let letters: [Character] = ["e","e","e","e","e","e","e","e","e","e","a","a","a","a","a","a","a","a","a","i","i","i","i","i","i","i","i","i","o","o","o","o","o","o","o","o","n","n","n","n","n","n","r","r","r","r","r","r","t","t","t","t","t","t","l","l","l","l","s","s","s","s","u","u","u","u","d","d","d","d","g","g","g","b","b","c","c","m","m","p","p","f","f","h","h","v","v","w","w","y","y","k","j","x"]
     
@@ -26,17 +28,21 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         start()
         // Do any additional setup after loading the view, typically from a nib.
     }
+    
     @IBAction func submit(sender: UITextField) {
         start()
         submission.resignFirstResponder()
         print("ha")
         if checker.CompleteCheck(currentLetters, typedInput: submission.text){
-            numberOfLetters++
             println("true")
+            WinningLabel.text = "Nice!"
+            WinningLabel.textColor = UIColor.greenColor()
             
         }else{
             numberOfLetters--
             println("false")
+            WinningLabel.text = "Better Luck Next Time"
+            WinningLabel.textColor = UIColor.redColor()
             
         }
         score += Array(submission.text).count
