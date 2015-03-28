@@ -1,0 +1,420 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DD23D8CF1AC7233800378BCD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD23D8CE1AC7233800378BCD /* AppDelegate.swift */; };
+		DD23D8D11AC7233800378BCD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD23D8D01AC7233800378BCD /* ViewController.swift */; };
+		DD23D8D41AC7233800378BCD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD23D8D21AC7233800378BCD /* Main.storyboard */; };
+		DD23D8D61AC7233800378BCD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD23D8D51AC7233800378BCD /* Images.xcassets */; };
+		DD23D8D91AC7233800378BCD /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD23D8D71AC7233800378BCD /* LaunchScreen.xib */; };
+		DD23D8E51AC7233800378BCD /* WordGameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD23D8E41AC7233800378BCD /* WordGameTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DD23D8DF1AC7233800378BCD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DD23D8C11AC7233800378BCD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DD23D8C81AC7233800378BCD;
+			remoteInfo = WordGame;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		DD23D8C91AC7233800378BCD /* WordGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WordGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD23D8CD1AC7233800378BCD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DD23D8CE1AC7233800378BCD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		DD23D8D01AC7233800378BCD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DD23D8D31AC7233800378BCD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DD23D8D51AC7233800378BCD /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		DD23D8D81AC7233800378BCD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		DD23D8DE1AC7233800378BCD /* WordGameTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WordGameTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD23D8E31AC7233800378BCD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DD23D8E41AC7233800378BCD /* WordGameTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordGameTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DD23D8C61AC7233800378BCD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DD23D8DB1AC7233800378BCD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DD23D8C01AC7233800378BCD = {
+			isa = PBXGroup;
+			children = (
+				DD23D8CB1AC7233800378BCD /* WordGame */,
+				DD23D8E11AC7233800378BCD /* WordGameTests */,
+				DD23D8CA1AC7233800378BCD /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DD23D8CA1AC7233800378BCD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DD23D8C91AC7233800378BCD /* WordGame.app */,
+				DD23D8DE1AC7233800378BCD /* WordGameTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DD23D8CB1AC7233800378BCD /* WordGame */ = {
+			isa = PBXGroup;
+			children = (
+				DD23D8CE1AC7233800378BCD /* AppDelegate.swift */,
+				DD23D8D01AC7233800378BCD /* ViewController.swift */,
+				DD23D8D21AC7233800378BCD /* Main.storyboard */,
+				DD23D8D51AC7233800378BCD /* Images.xcassets */,
+				DD23D8D71AC7233800378BCD /* LaunchScreen.xib */,
+				DD23D8CC1AC7233800378BCD /* Supporting Files */,
+			);
+			path = WordGame;
+			sourceTree = "<group>";
+		};
+		DD23D8CC1AC7233800378BCD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DD23D8CD1AC7233800378BCD /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DD23D8E11AC7233800378BCD /* WordGameTests */ = {
+			isa = PBXGroup;
+			children = (
+				DD23D8E41AC7233800378BCD /* WordGameTests.swift */,
+				DD23D8E21AC7233800378BCD /* Supporting Files */,
+			);
+			path = WordGameTests;
+			sourceTree = "<group>";
+		};
+		DD23D8E21AC7233800378BCD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DD23D8E31AC7233800378BCD /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DD23D8C81AC7233800378BCD /* WordGame */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DD23D8E81AC7233800378BCD /* Build configuration list for PBXNativeTarget "WordGame" */;
+			buildPhases = (
+				DD23D8C51AC7233800378BCD /* Sources */,
+				DD23D8C61AC7233800378BCD /* Frameworks */,
+				DD23D8C71AC7233800378BCD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WordGame;
+			productName = WordGame;
+			productReference = DD23D8C91AC7233800378BCD /* WordGame.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DD23D8DD1AC7233800378BCD /* WordGameTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DD23D8EB1AC7233800378BCD /* Build configuration list for PBXNativeTarget "WordGameTests" */;
+			buildPhases = (
+				DD23D8DA1AC7233800378BCD /* Sources */,
+				DD23D8DB1AC7233800378BCD /* Frameworks */,
+				DD23D8DC1AC7233800378BCD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DD23D8E01AC7233800378BCD /* PBXTargetDependency */,
+			);
+			name = WordGameTests;
+			productName = WordGameTests;
+			productReference = DD23D8DE1AC7233800378BCD /* WordGameTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DD23D8C11AC7233800378BCD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = JayAryeh;
+				TargetAttributes = {
+					DD23D8C81AC7233800378BCD = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+					DD23D8DD1AC7233800378BCD = {
+						CreatedOnToolsVersion = 6.1.1;
+						TestTargetID = DD23D8C81AC7233800378BCD;
+					};
+				};
+			};
+			buildConfigurationList = DD23D8C41AC7233800378BCD /* Build configuration list for PBXProject "WordGame" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DD23D8C01AC7233800378BCD;
+			productRefGroup = DD23D8CA1AC7233800378BCD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DD23D8C81AC7233800378BCD /* WordGame */,
+				DD23D8DD1AC7233800378BCD /* WordGameTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DD23D8C71AC7233800378BCD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD23D8D41AC7233800378BCD /* Main.storyboard in Resources */,
+				DD23D8D91AC7233800378BCD /* LaunchScreen.xib in Resources */,
+				DD23D8D61AC7233800378BCD /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DD23D8DC1AC7233800378BCD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DD23D8C51AC7233800378BCD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD23D8D11AC7233800378BCD /* ViewController.swift in Sources */,
+				DD23D8CF1AC7233800378BCD /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DD23D8DA1AC7233800378BCD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD23D8E51AC7233800378BCD /* WordGameTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DD23D8E01AC7233800378BCD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DD23D8C81AC7233800378BCD /* WordGame */;
+			targetProxy = DD23D8DF1AC7233800378BCD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DD23D8D21AC7233800378BCD /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DD23D8D31AC7233800378BCD /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		DD23D8D71AC7233800378BCD /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DD23D8D81AC7233800378BCD /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DD23D8E61AC7233800378BCD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		DD23D8E71AC7233800378BCD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DD23D8E91AC7233800378BCD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = WordGame/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		DD23D8EA1AC7233800378BCD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = WordGame/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		DD23D8EC1AC7233800378BCD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = WordGameTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WordGame.app/WordGame";
+			};
+			name = Debug;
+		};
+		DD23D8ED1AC7233800378BCD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = WordGameTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WordGame.app/WordGame";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DD23D8C41AC7233800378BCD /* Build configuration list for PBXProject "WordGame" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DD23D8E61AC7233800378BCD /* Debug */,
+				DD23D8E71AC7233800378BCD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DD23D8E81AC7233800378BCD /* Build configuration list for PBXNativeTarget "WordGame" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DD23D8E91AC7233800378BCD /* Debug */,
+				DD23D8EA1AC7233800378BCD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		DD23D8EB1AC7233800378BCD /* Build configuration list for PBXNativeTarget "WordGameTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DD23D8EC1AC7233800378BCD /* Debug */,
+				DD23D8ED1AC7233800378BCD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DD23D8C11AC7233800378BCD /* Project object */;
+}
