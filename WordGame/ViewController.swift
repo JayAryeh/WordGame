@@ -10,18 +10,24 @@ import UIKit
 
 class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
 
-    @IBOutlet weak var picker: UIPickerView!
+        @IBOutlet weak var picker: UIPickerView!
     private var numberOfLetters: Int = 5
     private let letters: [Character] = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    @IBAction func start(sender: AnyObject) {
+        for  i in 0..<numberOfLetters{
+            picker.selectRow(Int(arc4random_uniform(UInt32(26))), inComponent: i, animated: true)
+        }
+    }
+    
     // MARK:-
     // MARK: Picker Data Source Methods
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
