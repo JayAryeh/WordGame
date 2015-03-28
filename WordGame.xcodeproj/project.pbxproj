@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8E8A3E8E1AC7389100A85D26 /* checks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8A3E8D1AC7389100A85D26 /* checks.swift */; };
 		DD23D8CF1AC7233800378BCD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD23D8CE1AC7233800378BCD /* AppDelegate.swift */; };
 		DD23D8D11AC7233800378BCD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD23D8D01AC7233800378BCD /* ViewController.swift */; };
 		DD23D8D41AC7233800378BCD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD23D8D21AC7233800378BCD /* Main.storyboard */; };
@@ -26,6 +27,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8E8A3E8D1AC7389100A85D26 /* checks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = checks.swift; sourceTree = "<group>"; };
 		DD23D8C91AC7233800378BCD /* WordGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WordGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD23D8CD1AC7233800378BCD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DD23D8CE1AC7233800378BCD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -79,6 +81,7 @@
 			children = (
 				DD23D8CE1AC7233800378BCD /* AppDelegate.swift */,
 				DD23D8D01AC7233800378BCD /* ViewController.swift */,
+				8E8A3E8D1AC7389100A85D26 /* checks.swift */,
 				DD23D8D21AC7233800378BCD /* Main.storyboard */,
 				DD23D8D51AC7233800378BCD /* Images.xcassets */,
 				DD23D8D71AC7233800378BCD /* LaunchScreen.xib */,
@@ -213,6 +216,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DD23D8D11AC7233800378BCD /* ViewController.swift in Sources */,
+				8E8A3E8E1AC7389100A85D26 /* checks.swift in Sources */,
 				DD23D8CF1AC7233800378BCD /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -405,6 +409,7 @@
 				DD23D8EA1AC7233800378BCD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DD23D8EB1AC7233800378BCD /* Build configuration list for PBXNativeTarget "WordGameTests" */ = {
 			isa = XCConfigurationList;
@@ -413,6 +418,7 @@
 				DD23D8ED1AC7233800378BCD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
