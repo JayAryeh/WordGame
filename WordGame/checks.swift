@@ -16,28 +16,10 @@ class Checks{
     var chars: [Character] = []
     var checker:UITextChecker = UITextChecker()
     var textLength:Int = 0
-    var checkRange:NSRange
-    var misspelledRange:NSRange
+   var checkRange:NSRange = NSMakeRange(0, 0)
+    var misspelledRange:NSRange =  NSMakeRange(0, 0)
     
-  init(picker: [Character], typedInput: String){
-        pickerStuff = picker
-        typedStuff = typedInput
-        chars = Array(typedStuff)
-        textLength = chars.count
-        checkRange = NSMakeRange(0, textLength)
-         misspelledRange = checker.rangeOfMisspelledWordInString(typedStuff, range: checkRange, startingAt: checkRange.location, wrap: false, language: "en_Us")
-    }
-    
-    
-    
-    
-    
-
-
-
-    
-
-    
+   
     
     func allLetterAreThere()->Bool{
         var numToGet = chars.count
@@ -59,6 +41,8 @@ class Checks{
         return false
     }
     
+    
+    
     func spellCheck()->Bool{
         if (misspelledRange.length == 0){
             return true
@@ -67,7 +51,14 @@ class Checks{
     }
     
     
-    func CompleteCheck()->Bool{
+    func CompleteCheck(picker: [Character],typedInput: String)->Bool{
+        pickerStuff = picker
+        typedStuff = typedInput
+        chars = Array(typedStuff)
+        textLength = chars.count
+        checkRange = NSMakeRange(0, textLength)
+        misspelledRange = checker.rangeOfMisspelledWordInString(typedStuff, range: checkRange, startingAt: checkRange.location, wrap: false, language: "en_Us")
+        
         if( allLetterAreThere()&&spellCheck()){
         return true
         }
