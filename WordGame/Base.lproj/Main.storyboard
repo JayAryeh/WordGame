@@ -13,7 +13,7 @@
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS" customClass="UIControl">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
@@ -53,6 +53,9 @@
                             <constraint firstItem="DWC-N5-XC1" firstAttribute="centerX" secondItem="JIm-wO-plo" secondAttribute="centerX" id="lss-p9-6Wc"/>
                             <constraint firstAttribute="trailing" secondItem="EoK-On-UGv" secondAttribute="trailing" id="sZW-fd-3ie"/>
                         </constraints>
+                        <connections>
+                            <action selector="backGroundTap:" destination="vXZ-lx-hvc" eventType="valueChanged" id="gec-Z0-O1D"/>
+                        </connections>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>

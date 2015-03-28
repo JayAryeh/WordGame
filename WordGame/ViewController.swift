@@ -12,6 +12,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
 
     @IBOutlet weak var submission: UITextField!
         @IBOutlet weak var picker: UIPickerView!
+    private var checker: Checks = Checks()
     private var numberOfLetters: Int = 5
     private var currentLetters: [Character] = []
     private let letters: [Character] = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
@@ -21,8 +22,16 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     }
     @IBAction func submit(sender: AnyObject) {
         submission.resignFirstResponder()
+        if checker.CompleteCheck(currentLetters, typedInput: submission.text){
+            ++numberOfLetters
+            start(numberOfLetters)
+            
+        }
     }
     
+    @IBAction func backGroundTap(sender: AnyObject) {
+        submission.resignFirstResponder()
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

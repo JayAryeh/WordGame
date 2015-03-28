@@ -16,7 +16,7 @@ class Checks{
     var chars: [Character] = []
     var checker:UITextChecker = UITextChecker()
     var textLength:Int = 0
-   var checkRange:NSRange = NSMakeRange(0, 0)
+    var checkRange:NSRange = NSMakeRange(0, 0)
     var misspelledRange:NSRange =  NSMakeRange(0, 0)
     
    
