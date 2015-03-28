@@ -25,14 +25,14 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     private var currentRows: [Int] = []
     override func viewDidLoad() {
         super.viewDidLoad()
-        //start()
+        start()
         // Do any additional setup after loading the view, typically from a nib.
     }
     
     @IBAction func submit(sender: UITextField) {
-        start()
+        
         submission.resignFirstResponder()
-        print("ha")
+        
         if checker.CompleteCheck(currentLetters, typedInput: submission.text){
             println("true")
             WinningLabel.text = "Nice!"
