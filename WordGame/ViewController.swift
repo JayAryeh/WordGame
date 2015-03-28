@@ -10,6 +10,7 @@ import UIKit
 
 class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
 
+    @IBOutlet weak var submission: UITextField!
         @IBOutlet weak var picker: UIPickerView!
     private var numberOfLetters: Int = 5
     private var currentLetters: [Character] = []
@@ -17,6 +18,8 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+    }
+    @IBAction func submit(sender: AnyObject) {
     }
     
     override func didReceiveMemoryWarning() {
