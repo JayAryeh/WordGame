@@ -59,7 +59,7 @@ class Checks{
         checkRange = NSMakeRange(0, textLength)
         misspelledRange = checker.rangeOfMisspelledWordInString(typedStuff, range: checkRange, startingAt: checkRange.location, wrap: false, language: "en_Us")
         
-        if( allLetterAreThere()&&spellCheck()){
+        if( allLetterAreThere()&&spellCheck()&&(textLength>=2)){
         return true
         }
         return false
