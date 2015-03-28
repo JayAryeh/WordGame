@@ -22,10 +22,10 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     private var numberOfLetters: Int = 8
     private var currentLetters: [Character] = []
     private let letters: [Character] = ["e","e","e","e","e","e","e","e","e","e","a","a","a","a","a","a","a","a","a","i","i","i","i","i","i","i","i","i","o","o","o","o","o","o","o","o","n","n","n","n","n","n","r","r","r","r","r","r","t","t","t","t","t","t","l","l","l","l","s","s","s","s","u","u","u","u","d","d","d","d","g","g","g","b","b","c","c","m","m","p","p","f","f","h","h","v","v","w","w","y","y","k","j","x"]
-    
+    private var currentRows: [Int] = []
     override func viewDidLoad() {
         super.viewDidLoad()
-        start()
+        //start()
         // Do any additional setup after loading the view, typically from a nib.
     }
     
@@ -64,12 +64,14 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     }
      func start() {
         currentLetters.removeAll(keepCapacity: false)
+        currentRows = []
         for  i in 0..<numberOfLetters{
             var a = Int(arc4random_uniform(UInt32(letters.count)))
             
                 
             picker.selectRow(a, inComponent: i, animated: true)
             currentLetters.append(letters[a])
+            currentRows.append(a)
             
         }
         println(currentLetters)
@@ -88,7 +90,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     // MARK:-
     // MARK: Picker Delegate Methods
     func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String! {
-        return String(letters[row])
+        return String(letters[Int(arc4random_uniform(UInt32(letters.count)))])
     }
 
 
