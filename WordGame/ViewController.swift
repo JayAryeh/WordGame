@@ -20,6 +20,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         // Do any additional setup after loading the view, typically from a nib.
     }
     @IBAction func submit(sender: AnyObject) {
+        submission.resignFirstResponder()
     }
     
     override func didReceiveMemoryWarning() {
