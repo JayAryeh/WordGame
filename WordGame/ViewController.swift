@@ -8,12 +8,29 @@
 
 import UIKit
 
-class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
+class ViewController: UIViewController  {
 
-    @IBOutlet weak var round: UILabel!
-    @IBOutlet weak var scoreLabel: UILabel!
+    @IBAction func giveUp(sender: UIButton) {
+        var sum = 0
+        for i in words.componentsSeparatedByString("\n"){
+            for j in Array(i){
+                sum += letterScores[j]!
+            }
+            score += sum * sum
+            sum = 0
+        }
+        score = score - ( Array(lettersLabel.text!).count)
+        let alertController = UIAlertController(title: "Score: \(score)", message:
+            "you found: \(wordsLabel.text!)", preferredStyle: UIAlertControllerStyle.Alert)
+        alertController.addAction(UIAlertAction(title: "I agree completely good sir", style: UIAlertActionStyle.Default,handler: nil))
+        
+        self.presentViewController(alertController, animated: true, completion: nil)
+        start()
+        wordCount = 0
+        words = ""
+        wordsLabel.text = ""
+            }
     @IBOutlet weak var submission: UITextField!
-    @IBOutlet weak var picker: UIPickerView!
     @IBOutlet weak var WinningLabel: UILabel!
     @IBOutlet weak var lettersLabel: UILabel!
     @IBOutlet weak var wordsLabel: UILabel!
@@ -35,7 +52,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     }
     
     @IBAction func submit(sender: UITextField) {
-        
+        if(submission.text != nil && submission.text != ""){
         submission.resignFirstResponder()
         
         if checker.CompleteCheck(currentLetters, typedInput: submission.text){
@@ -53,9 +70,8 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
             WinningLabel.textColor = UIColor.redColor()
             
         }
-        score += Array(submission.text).count
-        picker.reloadAllComponents()
-            lettersLabel.text = " "
+        
+                    lettersLabel.text = " "
         for i in 0...(currentLetters.count-1){
             lettersLabel.text?.append(currentLetters[i])
             lettersLabel.text?.append(space)
@@ -63,10 +79,9 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         //start()
         submission.text = ""
         wordCount++
-        scoreLabel.text = "Score: \(wordCount)"
-       // round.text = "Words: \(wordCount)"
+               // round.text = "Words: \(wordCount)"
             }
-    
+    }
     func removeLetters(lettersinlist: [Character],typedInput: String){
         var typedInputToArray = Array(typedInput)
         var counting = 0
@@ -93,41 +108,22 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     }
      func start() {
         currentLetters.removeAll(keepCapacity: false)
-        currentRows = []
+        
         for  i in 0..<numberOfLetters{
             lettersLabel.text = ""
             var a = Int(arc4random_uniform(UInt32(letters.count)))
-            
-                
-            picker.selectRow(a, inComponent: i, animated: true)
-            currentLetters.append( Character(pickerView(picker, titleForRow: a, forComponent: i)) )
-            currentRows.append(a)
-            
-        }
+            currentLetters.append(letters[a])
+                    }
         
         for i in 0...(currentLetters.count-1){
             lettersLabel.text?.append(currentLetters[i])
             lettersLabel.text?.append(space)
         }
         println(currentLetters)
-        
+       
     }
     
-    // MARK:-
-    // MARK: Picker Data Source Methods
-    func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
-        return numberOfLetters   }
-    
-    func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return letters.count
-    }
-    
-    // MARK:-
-    // MARK: Picker Delegate Methods
-    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String! {
-        return String(letters[row])
-    }
-
+   
 
 }
 
