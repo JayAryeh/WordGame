@@ -103,10 +103,10 @@ class ViewController: UIViewController  {
                 WinningLabel.text = "Use at least 3 letters"
             }
             else if (checker.spellCheck() == false)&&(checker.allLetterAreThere() == false){
-                WinningLabel.text = "Those Letters arnt There!\nAnd thats not a word!"
+                WinningLabel.text = "Those Letters aren't There!\nAnd thats not a word!"
             }
             else if checker.spellCheck(){
-                WinningLabel.text = "Those Letters arnt There!"
+                WinningLabel.text = "Those Letters aren't There!"
             }
             else if checker.allLetterAreThere(){
                 WinningLabel.text = "Thats not a word!"
