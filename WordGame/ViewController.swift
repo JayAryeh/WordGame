@@ -27,8 +27,7 @@ class ViewController: UIViewController  {
         let alertController = UIAlertController(title: "Score: \(score)", message:
             "you found: \(wordsLabel.text!)", preferredStyle: UIAlertControllerStyle.Alert)
         alertController.addAction(UIAlertAction(title: "I agree completely good sir", style: UIAlertActionStyle.Default,handler: nil))
-        alertController.addTextFieldWithConfigurationHandler(<#configurationHandler: ((UITextField!) -> Void)!##(UITextField!) -> Void#>)
-        
+              
         self.presentViewController(alertController, animated: true, completion: nil)
         start()
         wordCount = 0
