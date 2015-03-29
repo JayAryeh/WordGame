@@ -43,7 +43,7 @@ class HighScoreTableViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("reuseidentifier", forIndexPath: indexPath) as UITableViewCell
-            cell.detailTextLabel?.text = "\(ScoreList.scorelist.scoreList[indexPath.row].initialset)"
+            cell.detailTextLabel?.text = "\(ScoreList.scorelist.scoreList[indexPath.row].name)"
         cell.textLabel?.text = "\(ScoreList.scorelist.scoreList[indexPath.row].score)"
         // Configure the cell...
 

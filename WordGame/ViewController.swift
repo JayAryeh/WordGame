@@ -22,11 +22,12 @@ class ViewController: UIViewController  {
             sum = 0
         }
         score = score - ( Array(lettersLabel.text!).count)
-        ScoreList.scorelist.scoreList.append(HighScore(Score: score, initialset: String(currentLetters), Name: ""))
+        ScoreList.scorelist.scoreList.append(HighScore(Score: score, Name: name))
         print(ScoreList.scorelist.scoreList.count)
         let alertController = UIAlertController(title: "Score: \(score)", message:
             "you found: \(wordsLabel.text!)", preferredStyle: UIAlertControllerStyle.Alert)
         alertController.addAction(UIAlertAction(title: "I agree completely good sir", style: UIAlertActionStyle.Default,handler: nil))
+        alertController.addTextFieldWithConfigurationHandler(<#configurationHandler: ((UITextField!) -> Void)!##(UITextField!) -> Void#>)
         
         self.presentViewController(alertController, animated: true, completion: nil)
         start()
@@ -37,6 +38,7 @@ class ViewController: UIViewController  {
         ScoreList.scorelist.save()
         
             }
+    var name = ""
     @IBOutlet weak var submission: UITextField!
     @IBOutlet weak var WinningLabel: UILabel!
     @IBOutlet weak var lettersLabel: UILabel!
