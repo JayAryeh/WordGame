@@ -16,8 +16,13 @@ class HighScore: NSObject, NSCoding{
        
     }
     init(Score: Int, Name: String){
+if(Name == ""){
+self.name = "anon"
+} else{
+self.name = Name
+}
         self.score = Score
-        self.name = Name
+        
        
     }
     func compare(comparand: HighScore) -> Int{
