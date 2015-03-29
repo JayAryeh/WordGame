@@ -22,20 +22,20 @@ class ViewController: UIViewController  {
             sum = 0
         }
         score = score - ( Array(lettersLabel.text!).count)
-        ScoreList.scorelist.scoreList.append(HighScore(Score: score, Name: name))
         print(ScoreList.scorelist.scoreList.count)
         let alertController = UIAlertController(title: "Score: \(score)", message:
             "you're name? \(wordsLabel.text!)", preferredStyle: UIAlertControllerStyle.Alert)
-        alertController.addAction(UIAlertAction(title: "continue playing", style: UIAlertActionStyle.Default,handler: nil))
+       
         
         self.presentViewController(alertController, animated: true, completion: nil)
         
         
-        let loginAction = UIAlertAction(title: "Score: \(score)", style: .Default) { (_) in
+        let loginAction = UIAlertAction(title: "continue", style: .Default) { (_) in
             let loginTextField = alertController.textFields![0] as UITextField
             
-           self.name = loginTextField.text
-        }
+            self.name = loginTextField.text
+            ScoreList.scorelist.scoreList.append(HighScore(Score: self.score, Name: self.name))
+                              }
         loginAction.enabled = false
         
         let forgotPasswordAction = UIAlertAction(title: "Forgot Password", style: .Destructive) { (_) in }
@@ -48,9 +48,9 @@ class ViewController: UIViewController  {
                 loginAction.enabled = textField.text != ""
             }
         }
-        
-      
-
+        alertController.addAction(loginAction)
+        ScoreList.scorelist.scoreList.append(HighScore(Score: score, Name: self.name))
+        println(self.name)
         start()
         wordCount = 0
         words = ""
