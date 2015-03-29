@@ -141,9 +141,9 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c0Z-uw-wfb">
-                                <rect key="frame" x="123" y="126" width="131" height="102"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="31"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c0Z-uw-wfb">
+                                <rect key="frame" x="36" y="126" width="293" height="102"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -180,14 +180,17 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="DWC-N5-XC1" firstAttribute="top" secondItem="c0Z-uw-wfb" secondAttribute="bottom" constant="54" id="0oF-u2-PcE"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Da1-KV-Dpe" secondAttribute="trailing" constant="7" id="3sh-Ud-AN5"/>
                             <constraint firstItem="DWC-N5-XC1" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="20" id="5Sh-cB-C9K"/>
                             <constraint firstItem="N8U-ri-ebo" firstAttribute="baseline" secondItem="Da1-KV-Dpe" secondAttribute="firstBaseline" id="6Si-vs-GnY"/>
                             <constraint firstItem="DWC-N5-XC1" firstAttribute="trailing" secondItem="zjK-Pg-94T" secondAttribute="trailing" id="7A1-Ha-Dan"/>
                             <constraint firstItem="zjK-Pg-94T" firstAttribute="leading" secondItem="DWC-N5-XC1" secondAttribute="leading" id="7id-f9-IiS"/>
-                            <constraint firstItem="AJv-9W-Lpf" firstAttribute="centerX" secondItem="c0Z-uw-wfb" secondAttribute="centerX" id="7o7-u9-APA"/>
                             <constraint firstItem="AJv-9W-Lpf" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="2" id="BLY-s6-Ovt"/>
+                            <constraint firstItem="c0Z-uw-wfb" firstAttribute="trailing" secondItem="DWC-N5-XC1" secondAttribute="trailing" id="CUL-qJ-Rmf"/>
                             <constraint firstItem="Da1-KV-Dpe" firstAttribute="baseline" secondItem="N8U-ri-ebo" secondAttribute="firstBaseline" id="D9S-L8-VmL"/>
+                            <constraint firstItem="c0Z-uw-wfb" firstAttribute="leading" secondItem="DWC-N5-XC1" secondAttribute="leading" id="Fyo-VR-5cA"/>
+                            <constraint firstItem="c0Z-uw-wfb" firstAttribute="top" secondItem="AJv-9W-Lpf" secondAttribute="bottom" constant="14" id="Iax-MO-Xr3"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="SPt-dB-4hP" secondAttribute="bottom" constant="321" id="JzO-cP-mk4"/>
                             <constraint firstItem="N8U-ri-ebo" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-10" id="KLT-qu-CmR"/>
                             <constraint firstAttribute="trailingMargin" secondItem="AJv-9W-Lpf" secondAttribute="trailing" constant="1" id="Kaz-pC-8ZQ"/>
@@ -196,11 +199,9 @@
                             <constraint firstItem="AJv-9W-Lpf" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="70" id="NIx-4r-HnP"/>
                             <constraint firstItem="N8U-ri-ebo" firstAttribute="top" secondItem="zjK-Pg-94T" secondAttribute="bottom" constant="17" id="ZBT-hZ-KZl"/>
                             <constraint firstItem="Da1-KV-Dpe" firstAttribute="bottom" secondItem="2fi-mo-0CV" secondAttribute="top" id="aiC-DM-VA1"/>
-                            <constraint firstItem="DWC-N5-XC1" firstAttribute="top" secondItem="c0Z-uw-wfb" secondAttribute="bottom" constant="54" id="c0r-Kp-CGE"/>
                             <constraint firstItem="zjK-Pg-94T" firstAttribute="top" secondItem="DWC-N5-XC1" secondAttribute="bottom" constant="8" symbolic="YES" id="hab-qS-zo7"/>
                             <constraint firstItem="SPt-dB-4hP" firstAttribute="centerX" secondItem="DWC-N5-XC1" secondAttribute="centerX" id="iB6-Y1-KBQ"/>
                             <constraint firstItem="Da1-KV-Dpe" firstAttribute="top" secondItem="N8U-ri-ebo" secondAttribute="top" id="sXF-2B-55Z"/>
-                            <constraint firstItem="c0Z-uw-wfb" firstAttribute="top" secondItem="AJv-9W-Lpf" secondAttribute="bottom" constant="14" id="ycy-OT-8OH"/>
                         </constraints>
                         <connections>
                             <action selector="backGroundTap:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="QKb-st-1AC"/>

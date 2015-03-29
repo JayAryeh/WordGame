@@ -61,6 +61,7 @@ class ViewController: UIViewController  {
     }
     
     @IBAction func submit(sender: UITextField) {
+        var arrayforcount = Array(submission.text)
         if(submission.text != nil && submission.text != ""){
         submission.resignFirstResponder()
         
@@ -75,7 +76,19 @@ class ViewController: UIViewController  {
         }else{
             numberOfLetters--
             println("false")
-            WinningLabel.text = "Nope!"
+            if (arrayforcount.count<3){
+                WinningLabel.text = "Use at least 3 letters"
+            }
+            else if (checker.spellCheck() == false)&&(checker.allLetterAreThere() == false){
+                WinningLabel.text = "Those Letters arnt There!\nAnd thats not a word!"
+            }
+            else if checker.spellCheck(){
+                WinningLabel.text = "Those Letters arnt There!"
+            }
+            else if checker.allLetterAreThere(){
+                WinningLabel.text = "Thats not a word!"
+            }
+            
             WinningLabel.textColor = UIColor.redColor()
             
         }
