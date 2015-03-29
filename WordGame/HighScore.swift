@@ -12,7 +12,7 @@ class HighScore: NSObject, NSCoding{
     var name: String
         override init(){
         self.score = 0
-        self.name = ""
+        self.name = "anon"
        
     }
     init(Score: Int, Name: String){
