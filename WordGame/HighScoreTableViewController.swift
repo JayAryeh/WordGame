@@ -9,10 +9,11 @@
 import UIKit
 
 class HighScoreTableViewController: UITableViewController {
-    var scoreList: [HighScore] = []
+    
+   
     override func viewDidLoad() {
         super.viewDidLoad()
-        println(scoreList)
+        println(ScoreList.scorelist.scoreList.count)
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -36,14 +37,14 @@ class HighScoreTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete method implementation.
         // Return the number of rows in the section.
-        return scoreList.count
+        return ScoreList.scorelist.scoreList.count
     }
 
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("reuseidentifier", forIndexPath: indexPath) as UITableViewCell
-            cell.detailTextLabel?.text = "\(scoreList[indexPath.row].initialset)"
-        cell.textLabel?.text = "\(scoreList[indexPath.row].score)"
+            cell.detailTextLabel?.text = "\(ScoreList.scorelist.scoreList[indexPath.row].initialset)"
+        cell.textLabel?.text = "\(ScoreList.scorelist.scoreList[indexPath.row].score)"
         // Configure the cell...
 
         return cell

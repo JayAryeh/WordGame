@@ -60,6 +60,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <button key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Zp9-W9-89h">
+                            <rect key="frame" x="-23" y="-15" width="375" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" title="back">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <segue destination="vXZ-lx-hvc" kind="showDetail" id="mLy-P4-tEe"/>
+                            </connections>
+                        </button>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="reuseidentifier" textLabel="hCL-dT-vjt" detailTextLabel="a8T-P1-9Bn" style="IBUITableViewCellStyleSubtitle" id="Kvq-Wg-097">
                                 <autoresizingMask key="autoresizingMask"/>
@@ -91,7 +101,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cOM-lp-2rd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-208.5" y="-6.5"/>
+            <point key="canvasLocation" x="-138.5" y="397.5"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
@@ -246,4 +256,7 @@
             <point key="canvasLocation" x="1075.5" y="388.5"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="mLy-P4-tEe"/>
+    </inferredMetricsTieBreakers>
 </document>

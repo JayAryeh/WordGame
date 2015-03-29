@@ -31,6 +31,7 @@ class ViewController: UIViewController  {
         words = ""
         
         wordsLabel.text = ""
+        
             }
     @IBOutlet weak var submission: UITextField!
     @IBOutlet weak var WinningLabel: UILabel!
@@ -111,6 +112,8 @@ class ViewController: UIViewController  {
         // Dispose of any resources that can be recreated.
     }
      func start() {
+        if(score != 0){ScoreList.scorelist.scoreList.append(HighScore(Score: score, initialset: String(currentLetters)))
+            print(ScoreList.scorelist.scoreList.count)}
         currentLetters.removeAll(keepCapacity: false)
         
         for  i in 0..<numberOfLetters{
@@ -126,14 +129,6 @@ class ViewController: UIViewController  {
         println(currentLetters)
        initialSet = "hi"
     }
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if(segue.identifier == "score"){
-            if let a = segue.destinationViewController as? HighScoreTableViewController{
-                a.scoreList.append(HighScore(Score: score, initialset: initialSet!))
-            print("hahahaha")}
-        }
-            }
    
-
 }
 
