@@ -112,7 +112,7 @@ class ViewController: UIViewController  {
                 WinningLabel.text = "Thats not a word!"
             }
             
-            WinningLabel.textColor = UIColor.redColor()
+            WinningLabel.textColor = UIColor.blackColor()
             
         }
         
