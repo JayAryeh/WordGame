@@ -11,8 +11,7 @@ import UIKit
 class ViewController: UIViewController  {
 
     @IBAction func giveUp(sender: UIButton) {
-        if(score != 0){ScoreList.scorelist.scoreList.append(HighScore(Score: score, initialset: String(currentLetters), Name: ""))
-            print(ScoreList.scorelist.scoreList.count)}
+        
         score = 0
         var sum = 0
         for i in words.componentsSeparatedByString("\n"){
@@ -23,6 +22,8 @@ class ViewController: UIViewController  {
             sum = 0
         }
         score = score - ( Array(lettersLabel.text!).count)
+        ScoreList.scorelist.scoreList.append(HighScore(Score: score, initialset: String(currentLetters), Name: ""))
+        print(ScoreList.scorelist.scoreList.count)
         let alertController = UIAlertController(title: "Score: \(score)", message:
             "you found: \(wordsLabel.text!)", preferredStyle: UIAlertControllerStyle.Alert)
         alertController.addAction(UIAlertAction(title: "I agree completely good sir", style: UIAlertActionStyle.Default,handler: nil))
