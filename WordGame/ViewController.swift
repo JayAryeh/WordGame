@@ -15,11 +15,15 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     @IBOutlet weak var submission: UITextField!
     @IBOutlet weak var picker: UIPickerView!
     @IBOutlet weak var WinningLabel: UILabel!
+    @IBOutlet weak var lettersLabel: UILabel!
+    @IBOutlet weak var wordsLabel: UILabel!
     
-    private var roundNumber = 0
+    private var words: String = ""
+    private var space: Character = " "
+    private var wordCount = 0
     private var score = 0
     private var checker: Checks = Checks()
-    private var numberOfLetters: Int = 8
+    private var numberOfLetters: Int = 24
     private var currentLetters: [Character] = []
     private let letters: [Character] = ["e","e","e","e","e","e","e","e","e","e","a","a","a","a","a","a","a","a","a","i","i","i","i","i","i","i","i","i","o","o","o","o","o","o","o","o","n","n","n","n","n","n","r","r","r","r","r","r","t","t","t","t","t","t","l","l","l","l","s","s","s","s","u","u","u","u","d","d","d","d","g","g","g","b","b","c","c","m","m","p","p","f","f","h","h","v","v","w","w","y","y","k","j","x"]
     private var currentRows: [Int] = []
@@ -34,25 +38,49 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         submission.resignFirstResponder()
         
         if checker.CompleteCheck(currentLetters, typedInput: submission.text){
+            words += submission.text
+            words += "\n"
+            wordsLabel.text = words
             println("true")
             WinningLabel.text = "Nice!"
             WinningLabel.textColor = UIColor.greenColor()
-            
+            removeLetters(currentLetters, typedInput: submission.text)
         }else{
             numberOfLetters--
             println("false")
-            WinningLabel.text = "Better Luck Next Time"
+            WinningLabel.text = "Nope!"
             WinningLabel.textColor = UIColor.redColor()
             
         }
         score += Array(submission.text).count
         picker.reloadAllComponents()
-        start()
+            lettersLabel.text = " "
+        for i in 0...(currentLetters.count-1){
+            lettersLabel.text?.append(currentLetters[i])
+            lettersLabel.text?.append(space)
+        }
+        //start()
         submission.text = ""
-        roundNumber++
-        scoreLabel.text = "Score: \(score)"
-        round.text = "Round: \(roundNumber)"
+        wordCount++
+        scoreLabel.text = "Score: \(wordCount)"
+       // round.text = "Words: \(wordCount)"
             }
+    
+    func removeLetters(lettersinlist: [Character],typedInput: String){
+        var typedInputToArray = Array(typedInput)
+        var counting = 0
+        for i in 0...(typedInputToArray.count-1) {
+            for p in 0...(currentLetters.count-1){
+                if (typedInputToArray[i] == currentLetters[p]) {
+                        counting++
+                        currentLetters.removeAtIndex(p)
+                        break
+                }
+            }
+        }
+        
+    
+    }
     
     @IBAction func backGroundTap(sender: AnyObject) {
         submission.resignFirstResponder()
@@ -66,6 +94,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         currentLetters.removeAll(keepCapacity: false)
         currentRows = []
         for  i in 0..<numberOfLetters{
+            lettersLabel.text = ""
             var a = Int(arc4random_uniform(UInt32(letters.count)))
             
                 
@@ -73,6 +102,11 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
             currentLetters.append( Character(pickerView(picker, titleForRow: a, forComponent: i)) )
             currentRows.append(a)
             
+        }
+        
+        for i in 0...(currentLetters.count-1){
+            lettersLabel.text?.append(currentLetters[i])
+            lettersLabel.text?.append(space)
         }
         println(currentLetters)
         

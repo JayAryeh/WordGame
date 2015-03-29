@@ -35,6 +35,7 @@ class Checks{
                 
             }
         }
+        
         if(count >= numToGet){
             return true
         }
