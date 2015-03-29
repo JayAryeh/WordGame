@@ -34,6 +34,7 @@ class ViewController: UIViewController  {
         words = ""
         
         wordsLabel.text = ""
+        ScoreList.scorelist.save()
         
             }
     @IBOutlet weak var submission: UITextField!
@@ -54,6 +55,7 @@ class ViewController: UIViewController  {
     private var currentRows: [Int] = []
     override func viewDidLoad() {
         super.viewDidLoad()
+        ScoreList.scorelist.unArchiving()
         start()
         // Do any additional setup after loading the view, typically from a nib.
     }

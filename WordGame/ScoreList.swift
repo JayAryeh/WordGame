@@ -24,7 +24,23 @@ class ScoreList{
             
         }
     }
-    init(){
+     init(){
         scoreList = []
     }
+    
+    func save(){
+        var paths = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)
+        var path = paths[0].stringByAppendingPathComponent("colonies")
+        NSKeyedArchiver.archiveRootObject(scoreList, toFile: path)
+        
+    }
+    func unArchiving(){
+        var paths = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)
+        var path = paths[0].stringByAppendingPathComponent("colonies")
+        if let archived = NSKeyedUnarchiver.unarchiveObjectWithFile(path) as? [HighScore]{
+            scoreList = archived
+            
+        }
+    }
+
 }
