@@ -11,6 +11,8 @@ import UIKit
 class ViewController: UIViewController  {
 
     @IBAction func giveUp(sender: UIButton) {
+        if(score != 0){ScoreList.scorelist.scoreList.append(HighScore(Score: score, initialset: String(currentLetters), Name: ""))
+            print(ScoreList.scorelist.scoreList.count)}
         score = 0
         var sum = 0
         for i in words.componentsSeparatedByString("\n"){
@@ -112,8 +114,7 @@ class ViewController: UIViewController  {
         // Dispose of any resources that can be recreated.
     }
      func start() {
-        if(score != 0){ScoreList.scorelist.scoreList.append(HighScore(Score: score, initialset: String(currentLetters)))
-            print(ScoreList.scorelist.scoreList.count)}
+       
         currentLetters.removeAll(keepCapacity: false)
         
         for  i in 0..<numberOfLetters{

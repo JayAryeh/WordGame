@@ -17,12 +17,14 @@ class ScoreList{
         
     }
     
-    var scoreList: [HighScore]?{
+    var scoreList: [HighScore]{
         didSet{
-            scoreList?.sort((HighScore: a, HighScore: b) -> (a.score - b.score > 0))
+            scoreList.sort{$0.score - $1.score > 0}
 
             
         }
     }
-    
+    init(){
+        scoreList = []
+    }
 }

@@ -9,14 +9,15 @@
 import Foundation
 class HighScore{
     var score: Int
-    
+    var name: String
     var initialset: String
-    init(Score: Int, initialset: String){
+    init(Score: Int, initialset: String, Name: String){
         self.score = Score
-       
+        self.name = Name
         self.initialset = initialset
     }
     func compare(comparand: HighScore) -> Int{
         return self.score - comparand.score
+        
     }
 }
