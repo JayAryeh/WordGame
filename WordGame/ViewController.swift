@@ -25,10 +25,32 @@ class ViewController: UIViewController  {
         ScoreList.scorelist.scoreList.append(HighScore(Score: score, Name: name))
         print(ScoreList.scorelist.scoreList.count)
         let alertController = UIAlertController(title: "Score: \(score)", message:
-            "you found: \(wordsLabel.text!)", preferredStyle: UIAlertControllerStyle.Alert)
-        alertController.addAction(UIAlertAction(title: "I agree completely good sir", style: UIAlertActionStyle.Default,handler: nil))
-              
+            "you're name? \(wordsLabel.text!)", preferredStyle: UIAlertControllerStyle.Alert)
+        alertController.addAction(UIAlertAction(title: "continue playing", style: UIAlertActionStyle.Default,handler: nil))
+        
         self.presentViewController(alertController, animated: true, completion: nil)
+        
+        
+        let loginAction = UIAlertAction(title: "Score: \(score)", style: .Default) { (_) in
+            let loginTextField = alertController.textFields![0] as UITextField
+            
+           self.name = loginTextField.text
+        }
+        loginAction.enabled = false
+        
+        let forgotPasswordAction = UIAlertAction(title: "Forgot Password", style: .Destructive) { (_) in }
+        let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel) { (_) in }
+        
+        alertController.addTextFieldWithConfigurationHandler { (textField) in
+            textField.placeholder = "Name"
+            
+            NSNotificationCenter.defaultCenter().addObserverForName(UITextFieldTextDidChangeNotification, object: textField, queue: NSOperationQueue.mainQueue()) { (notification) in
+                loginAction.enabled = textField.text != ""
+            }
+        }
+        
+      
+
         start()
         wordCount = 0
         words = ""
