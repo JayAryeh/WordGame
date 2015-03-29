@@ -11,6 +11,7 @@ import UIKit
 class ViewController: UIViewController  {
 
     @IBAction func giveUp(sender: UIButton) {
+        score = 0
         var sum = 0
         for i in words.componentsSeparatedByString("\n"){
             for j in Array(i){

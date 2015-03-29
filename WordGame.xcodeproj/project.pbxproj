@@ -14,6 +14,7 @@
 		DD23D8D61AC7233800378BCD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD23D8D51AC7233800378BCD /* Images.xcassets */; };
 		DD23D8D91AC7233800378BCD /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD23D8D71AC7233800378BCD /* LaunchScreen.xib */; };
 		DD23D8E51AC7233800378BCD /* WordGameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD23D8E41AC7233800378BCD /* WordGameTests.swift */; };
+		DD6DEE331AC7BF9900E725BC /* HighScore.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6DEE321AC7BF9900E725BC /* HighScore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		DD23D8DE1AC7233800378BCD /* WordGameTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WordGameTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD23D8E31AC7233800378BCD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DD23D8E41AC7233800378BCD /* WordGameTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordGameTests.swift; sourceTree = "<group>"; };
+		DD6DEE321AC7BF9900E725BC /* HighScore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HighScore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,7 @@
 				DD23D8D51AC7233800378BCD /* Images.xcassets */,
 				DD23D8D71AC7233800378BCD /* LaunchScreen.xib */,
 				DD23D8CC1AC7233800378BCD /* Supporting Files */,
+				DD6DEE321AC7BF9900E725BC /* HighScore.swift */,
 			);
 			path = WordGame;
 			sourceTree = "<group>";
@@ -217,6 +220,7 @@
 			files = (
 				DD23D8D11AC7233800378BCD /* ViewController.swift in Sources */,
 				8E8A3E8E1AC7389100A85D26 /* checks.swift in Sources */,
+				DD6DEE331AC7BF9900E725BC /* HighScore.swift in Sources */,
 				DD23D8CF1AC7233800378BCD /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
