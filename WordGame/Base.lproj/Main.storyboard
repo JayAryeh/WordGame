@@ -104,7 +104,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cOM-lp-2rd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-171.5" y="430.5"/>
+            <point key="canvasLocation" x="-504" y="531"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
@@ -255,10 +255,10 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fcW-cW-938" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1075.5" y="388.5"/>
+            <point key="canvasLocation" x="1140" y="279"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Stn-tE-rnK"/>
+        <segue reference="mLy-P4-tEe"/>
     </inferredMetricsTieBreakers>
 </document>
